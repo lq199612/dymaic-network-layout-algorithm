@@ -307,9 +307,8 @@ def read_json_file(file_path):
         json_data = json.load(fp)
         return json_data
     
-os.chdir('C:\\Users\\Administrator\\Desktop\\图可视化\\动态网络布局\\数据')
-data1 = read_json_file('freq=7343.590000-17-07-8.json')
-data2 = read_json_file('freq=7343.590000-17-07-10.json')
+data1 = read_json_file('./data/data1.json')
+data2 = read_json_file('./data/data2.json')
 
 nodes1 = [i['id'] for i in data1['nodes']]
 nodes2 = [i['id'] for i in data2['nodes']]
