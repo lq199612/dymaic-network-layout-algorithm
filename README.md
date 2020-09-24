@@ -1,2 +1,6 @@
 # dymaic-network-layout-algorithm
-dynamic graph layout algorithm base on Fruchterman-Reingold algorithm
+dynamic network layout algorithm base on multiple constraints
+
+
+
+Fruchterman-Reingold algorithm
