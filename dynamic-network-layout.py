@@ -16,12 +16,10 @@ def fruchterman_reingold_init(
     # Position nodes in adjacency matrix A using Fruchterman-Reingold
     # Entry point for NetworkX graph is fruchterman_reingold_layout()
     nnodes, _ = A.shape
-    # print('nnodes',nnodes)
     # 位置初始化
     if pos is None:
         seed = rdm(10)
         pos = np.asarray(seed.rand(nnodes, dim), dtype=A.dtype)
-        # print('seed', type(seed) )
     else:
         pos = pos.astype(A.dtype)
     # 初始化k
@@ -154,7 +152,6 @@ def fruchterman_reingold(
         
 
         length[[node_id[i] for i in l1]] = [np.exp(-time_evolution[i])*length[node_id[i]] for i in l1]
-        # print('length',length)
         length = np.where(length < 0.01, 0.1, length)
         delta_pos = np.einsum("ij,i->ij", displacement, t / length)
         if fixed is not None:
